@@ -14,8 +14,9 @@ class TwitterAccountAdmin(admin.ModelAdmin):
 
 
 class TwitterStatusAdmin(admin.ModelAdmin):
-    list_display = ('author', 'content', 'created_date',)
-    fields = ('author', 'status_id', 'content', 'created_date', 'date')
+    list_display = ('author', 'content', 'created_date', 'published')
+    list_filter = ('published',)
+    fields = ('author', 'status_id', 'content', 'created_date', 'date', 'published')
     readonly_fields = (
         'author', 'status_id', 'content', 'created_date', 'date',
     )

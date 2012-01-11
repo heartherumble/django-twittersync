@@ -52,6 +52,8 @@ class TwitterStatus(models.Model):
     created_date = models.DateTimeField(_('Created At'))
     date = models.DateTimeField(default=datetime.datetime.now)
 
+    published = models.BooleanField(default=True)
+
     objects = TwitterStatusManager()
 
     class Meta:
