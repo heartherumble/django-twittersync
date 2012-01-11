@@ -1,0 +1,4 @@
+include BSD-LICENSE
+include README.txt
+recursive-include twittersync/management *
+recursive-include twittersync/templatetags *
